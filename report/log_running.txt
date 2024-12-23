@@ -1,0 +1,114 @@
+Downloading from https://www.kaggle.com/api/v1/datasets/download/koinguyn/chess-detection?dataset_version_number=1...
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 179M/179M [00:10<00:00, 17.6MB/s]
+Extracting files...
+Classes: ['Bishop', 'King', 'Knight', 'Pawn', 'Queen', 'Rook']
+Class-to-Index Mapping: {'Bishop': 0, 'King': 1, 'Knight': 2, 'Pawn': 3, 'Queen': 4, 'Rook': 5}
+Epoch 1/100, Train Loss: 0.6386, Val Loss: 0.4694, Val Accuracy: 83.43%
+Model saved to chess_model.pth
+Epoch 2/100, Train Loss: 0.2592, Val Loss: 0.2712, Val Accuracy: 91.29%
+Model saved to chess_model.pth
+Epoch 3/100, Train Loss: 0.1930, Val Loss: 0.2021, Val Accuracy: 93.86%
+Model saved to chess_model.pth
+Epoch 4/100, Train Loss: 0.1638, Val Loss: 0.3798, Val Accuracy: 86.71%
+No improvement for 1 epoch(s).
+Epoch 5/100, Train Loss: 0.1420, Val Loss: 0.1331, Val Accuracy: 96.00%
+Model saved to chess_model.pth
+Epoch 6/100, Train Loss: 0.1344, Val Loss: 0.2148, Val Accuracy: 93.14%
+No improvement for 1 epoch(s).
+Epoch 7/100, Train Loss: 0.1346, Val Loss: 0.3173, Val Accuracy: 90.43%
+No improvement for 2 epoch(s).
+Epoch 8/100, Train Loss: 0.1132, Val Loss: 0.2414, Val Accuracy: 93.00%
+No improvement for 3 epoch(s).
+Epoch 9/100, Train Loss: 0.1232, Val Loss: 0.2523, Val Accuracy: 92.29%
+No improvement for 4 epoch(s).
+Epoch 10/100, Train Loss: 0.0590, Val Loss: 0.0940, Val Accuracy: 97.71%
+Model saved to chess_model.pth
+Epoch 11/100, Train Loss: 0.0305, Val Loss: 0.0806, Val Accuracy: 98.00%
+Model saved to chess_model.pth
+Epoch 12/100, Train Loss: 0.0267, Val Loss: 0.0894, Val Accuracy: 97.43%
+No improvement for 1 epoch(s).
+Epoch 13/100, Train Loss: 0.0208, Val Loss: 0.0868, Val Accuracy: 97.86%
+No improvement for 2 epoch(s).
+Epoch 14/100, Train Loss: 0.0174, Val Loss: 0.0854, Val Accuracy: 98.00%
+No improvement for 3 epoch(s).
+Epoch 15/100, Train Loss: 0.0163, Val Loss: 0.0865, Val Accuracy: 97.57%
+No improvement for 4 epoch(s).
+Epoch 16/100, Train Loss: 0.0143, Val Loss: 0.0959, Val Accuracy: 97.57%
+No improvement for 5 epoch(s).
+Epoch 17/100, Train Loss: 0.0109, Val Loss: 0.0860, Val Accuracy: 97.71%
+No improvement for 6 epoch(s).
+Epoch 18/100, Train Loss: 0.0129, Val Loss: 0.0911, Val Accuracy: 97.71%
+No improvement for 7 epoch(s).
+Epoch 19/100, Train Loss: 0.0140, Val Loss: 0.0889, Val Accuracy: 98.00%
+No improvement for 8 epoch(s).
+Epoch 20/100, Train Loss: 0.0131, Val Loss: 0.0888, Val Accuracy: 97.43%
+No improvement for 9 epoch(s).
+Epoch 21/100, Train Loss: 0.0114, Val Loss: 0.0847, Val Accuracy: 97.57%
+No improvement for 10 epoch(s).
+Epoch 22/100, Train Loss: 0.0108, Val Loss: 0.0881, Val Accuracy: 98.00%
+No improvement for 11 epoch(s).
+Epoch 23/100, Train Loss: 0.0106, Val Loss: 0.0949, Val Accuracy: 97.29%
+No improvement for 12 epoch(s).
+Epoch 24/100, Train Loss: 0.0104, Val Loss: 0.1018, Val Accuracy: 97.57%
+No improvement for 13 epoch(s).
+Epoch 25/100, Train Loss: 0.0101, Val Loss: 0.0789, Val Accuracy: 97.71%
+Model saved to chess_model.pth
+Epoch 26/100, Train Loss: 0.0122, Val Loss: 0.0869, Val Accuracy: 97.86%
+No improvement for 1 epoch(s).
+Epoch 27/100, Train Loss: 0.0116, Val Loss: 0.0867, Val Accuracy: 98.29%
+No improvement for 2 epoch(s).
+Epoch 28/100, Train Loss: 0.0121, Val Loss: 0.0728, Val Accuracy: 98.43%
+Model saved to chess_model.pth
+Epoch 29/100, Train Loss: 0.0122, Val Loss: 0.0932, Val Accuracy: 98.00%
+No improvement for 1 epoch(s).
+Epoch 30/100, Train Loss: 0.0120, Val Loss: 0.0997, Val Accuracy: 97.57%
+No improvement for 2 epoch(s).
+Epoch 31/100, Train Loss: 0.0127, Val Loss: 0.0795, Val Accuracy: 97.71%
+No improvement for 3 epoch(s).
+Epoch 32/100, Train Loss: 0.0143, Val Loss: 0.0856, Val Accuracy: 97.71%
+No improvement for 4 epoch(s).
+Epoch 33/100, Train Loss: 0.0148, Val Loss: 0.0787, Val Accuracy: 97.71%
+No improvement for 5 epoch(s).
+Epoch 34/100, Train Loss: 0.0145, Val Loss: 0.0878, Val Accuracy: 97.71%
+No improvement for 6 epoch(s).
+Epoch 35/100, Train Loss: 0.0116, Val Loss: 0.1057, Val Accuracy: 97.71%
+No improvement for 7 epoch(s).
+Epoch 36/100, Train Loss: 0.0126, Val Loss: 0.0752, Val Accuracy: 98.00%
+No improvement for 8 epoch(s).
+Epoch 37/100, Train Loss: 0.0138, Val Loss: 0.0844, Val Accuracy: 98.14%
+No improvement for 9 epoch(s).
+Epoch 38/100, Train Loss: 0.0123, Val Loss: 0.0794, Val Accuracy: 97.57%
+No improvement for 10 epoch(s).
+Epoch 39/100, Train Loss: 0.0112, Val Loss: 0.0827, Val Accuracy: 97.71%
+No improvement for 11 epoch(s).
+Epoch 40/100, Train Loss: 0.0102, Val Loss: 0.0885, Val Accuracy: 97.86%
+No improvement for 12 epoch(s).
+Epoch 41/100, Train Loss: 0.0115, Val Loss: 0.0858, Val Accuracy: 97.86%
+No improvement for 13 epoch(s).
+Epoch 42/100, Train Loss: 0.0119, Val Loss: 0.0822, Val Accuracy: 97.57%
+No improvement for 14 epoch(s).
+Epoch 43/100, Train Loss: 0.0110, Val Loss: 0.0930, Val Accuracy: 97.86%
+No improvement for 15 epoch(s).
+Early stopping triggered!
+Confusion Matrix:
+[[101   1   0   0   0   0]
+ [  0 127   0   0   3   0]
+ [  1   0 123   0   0   0]
+ [  0   0   2 123   0   0]
+ [  0   2   2   1  96   1]
+ [  1   0   1   0   0 115]]
+Classification Report:
+              precision    recall  f1-score   support
+
+      Bishop       0.98      0.99      0.99       102
+        King       0.98      0.98      0.98       130
+      Knight       0.96      0.99      0.98       124
+        Pawn       0.99      0.98      0.99       125
+       Queen       0.97      0.94      0.96       102
+        Rook       0.99      0.98      0.99       117
+
+    accuracy                           0.98       700
+   macro avg       0.98      0.98      0.98       700
+weighted avg       0.98      0.98      0.98       700
+
+Training complete!
