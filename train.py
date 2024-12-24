@@ -11,7 +11,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import kagglehub
 
-
 def plot_confusion_matrix(cm, class_names):
     plt.figure(figsize=(10, 7))
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=class_names, yticklabels=class_names)
@@ -19,7 +18,6 @@ def plot_confusion_matrix(cm, class_names):
     plt.ylabel('True Labels')
     plt.title('Confusion Matrix')
     plt.show()
-
 
 def train_model(data_path, epochs=100, batch_size=64, learning_rate=0.001, model_save_path="chess_model.pth", patience=15):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -35,7 +33,7 @@ def train_model(data_path, epochs=100, batch_size=64, learning_rate=0.001, model
 
     dataset = datasets.ImageFolder(os.path.join(data_path, "train"), transform=transform)
     num_classes = len(dataset.classes)
-    
+
     print(f"Classes: {dataset.classes}")
     print(f"Class-to-Index Mapping: {dataset.class_to_idx}")
 
@@ -57,9 +55,15 @@ def train_model(data_path, epochs=100, batch_size=64, learning_rate=0.001, model
     best_val_loss = float('inf')
     patience_counter = 0
 
+    train_accuracies = []
+    val_accuracies = []
+
     for epoch in range(epochs):
         model.train()
         running_loss = 0.0
+        correct_train = 0
+        total_train = 0
+
         for inputs, labels in train_loader:
             inputs, labels = inputs.to(device), labels.to(device)
 
@@ -70,13 +74,20 @@ def train_model(data_path, epochs=100, batch_size=64, learning_rate=0.001, model
             optimizer.step()
 
             running_loss += loss.item()
+            _, preds = torch.max(outputs, 1)
+            correct_train += (preds == labels).sum().item()
+            total_train += labels.size(0)
+
+        train_acc = correct_train / total_train
+        train_accuracies.append(train_acc)
 
         model.eval()
         val_loss = 0.0
-        correct = 0
-        total = 0
+        correct_val = 0
+        total_val = 0
         all_preds = []
         all_labels = []
+
         with torch.no_grad():
             for inputs, labels in val_loader:
                 inputs, labels = inputs.to(device), labels.to(device)
@@ -84,15 +95,17 @@ def train_model(data_path, epochs=100, batch_size=64, learning_rate=0.001, model
                 loss = criterion(outputs, labels)
                 val_loss += loss.item()
                 _, preds = torch.max(outputs, 1)
-                correct += (preds == labels).sum().item()
-                total += labels.size(0)
+                correct_val += (preds == labels).sum().item()
+                total_val += labels.size(0)
 
                 all_preds.extend(preds.cpu().numpy())
                 all_labels.extend(labels.cpu().numpy())
 
         val_loss /= len(val_loader)
-        val_acc = correct / total
-        print(f"Epoch {epoch + 1}/{epochs}, Train Loss: {running_loss / len(train_loader):.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_acc * 100:.2f}%")
+        val_acc = correct_val / total_val
+        val_accuracies.append(val_acc)
+
+        print(f"Epoch {epoch + 1}/{epochs}, Train Loss: {running_loss / len(train_loader):.4f}, Train Accuracy: {train_acc * 100:.2f}%, Val Loss: {val_loss:.4f}, Val Accuracy: {val_acc * 100:.2f}%")
 
         scheduler.step(val_loss)
 
@@ -118,8 +131,16 @@ def train_model(data_path, epochs=100, batch_size=64, learning_rate=0.001, model
     print("Classification Report:")
     print(classification_report(all_labels, all_preds, target_names=dataset.classes))
 
-    print("Training complete!")
+    # Plot Accuracy Graph
+    plt.plot(range(1, len(train_accuracies) + 1), train_accuracies, label='Train Accuracy')
+    plt.plot(range(1, len(val_accuracies) + 1), val_accuracies, label='Val Accuracy')
+    plt.title('Model Accuracy')
+    plt.xlabel('Epoch')
+    plt.ylabel('Accuracy')
+    plt.legend(loc='upper left')
+    plt.show()
 
+    print("Training complete!")
 
 if __name__ == "__main__":
     path = kagglehub.dataset_download('koinguyn/chess-detection')

@@ -1,0 +1,29 @@
+Confusion: 
+- https://www.digitalocean.com/community/tutorials/deep-learning-metrics-precision-recall-accuracy
+
+F1-Score:
+- https://www.geeksforgeeks.org/f1-score-in-machine-learning/
+- https://encord.com/blog/f1-score-in-machine-learning/
+
+Adam Optimizer:
+- https://viblo.asia/p/optimizer-hieu-sau-ve-cac-thuat-toan-toi-uu-gdsgdadam-Qbq5QQ9E5D8
+- https://www.geeksforgeeks.org/adam-optimizer/
+- https://builtin.com/machine-learning/adam-optimization
+
+Data Augmentation:
+- https://www.datacamp.com/tutorial/complete-guide-data-augmentation
+
+Early Stopping:
+- https://www.geeksforgeeks.org/regularization-by-early-stopping/
+- https://www.deepchecks.com/glossary/early-stopping/
+
+Reduce Learning Rate:
+- https://www.geeksforgeeks.org/impact-of-learning-rate-on-a-model/
+- https://stackoverflow.com/questions/65869114/why-models-often-benefit-from-reducing-the-learning-rate-during-training
+- https://www.lakera.ai/ml-glossary/learning-rate
+- https://www.linkedin.com/advice/0/what-best-way-adjust-learning-rate-decay-neural-c8npc
+
+CNN:
+- https://www.datacamp.com/tutorial/introduction-to-convolutional-neural-networks-cnns
+- https://www.geeksforgeeks.org/convolutional-neural-network-cnn-in-machine-learning/
+- https://www.linkedin.com/advice/0/what-advantages-disadvantages-using-convolutional
